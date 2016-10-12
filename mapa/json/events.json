@@ -4,19 +4,64 @@
             "src": "us",
             "eqid": "2010zjb3",
             "timedate": "2010-07-31 23:34:56",
-            "lat": "51.505",
-            "lon": "-0.09",
-            "magnitude": "4.7",
+            "lat": 36.4828,
+            "lon": 70.3622,
+            "magnitude": "2",
             "depth": "208.5",
             "region": "Ghowrayd Gharami, Afghanistan"
         }, {
             "src": "us",
             "eqid": "2010zjbz",
             "timedate": "2010-07-31 23:12:59",
-            "lat": "-15.9",
-            "lon": "-67.5",
+            "lat": -7.0987,
+            "lon": 150.6746,
             "magnitude": "5.1",
             "depth": "69.6",
             "region": "Gasmata, Papua New Guinea"
+        }, {
+            "src": "us",
+            "eqid": "2010zjbe",
+            "timedate": "2010-07-31 18:20:09",
+            "lat": 52.9777,
+            "lon": -169.8306,
+            "magnitude": "4.0",
+            "depth": "17.6",
+            "region": "Nikolski, AK, United States"
+        }, {
+            "src": "ak",
+            "eqid": "10066861",
+            "timedate": "2010-07-31 18:20:06",
+            "lat": 52.6978,
+            "lon": -169.6822,
+            "magnitude": "4.1",
+            "depth": "4.8",
+            "region": "Nikolski, AK, United States"
+        }, {
+            "src": "us",
+            "eqid": "2010zjbd",
+            "timedate": "2010-07-31 18:17:21",
+            "lat": 52.832,
+            "lon": -169.7821,
+            "magnitude": "4.1",
+            "depth": "25.7",
+            "region": "Nikolski, AK, United States"
+        }, {
+            "src": "ak",
+            "eqid": "10066858",
+            "timedate": "2010-07-31 18:17:18",
+            "lat": 52.6676,
+            "lon": -169.6415,
+            "magnitude": "4.0",
+            "depth": "4.8",
+            "region": "Nikolski, AK, United States"            
+        }, {
+            "src": "us",
+            "eqid": "2010zjay",
+            "timedate": "2010-07-31 11:36:56",
+            "lat": -0.7272,
+            "lon": -15.9773,
+            "magnitude": "5.4",
+            "depth": "10.4",
+            "region": "Ilha em algum lugar"
         }]
 }

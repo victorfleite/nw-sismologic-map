@@ -31,7 +31,9 @@
 
     <section id="map">
         <openlayers  ol-center="mapCenterConfig.center" width="100%" height="100%">
-            <ol-marker ng-repeat="event in events" lat="event.lat" lon="event.lon"></ol-marker>
+            <ol-marker ng-repeat="event in events" name="event.region" lat="event.lat" lon="event.lon">
+                <p ng-click="openModalAlert(event)"><img ng-src="{{getIcon(event.magnitude)}}"></p>
+            </ol-marker>
         </openlayers>		
     </section>
 
@@ -49,6 +51,7 @@
     <script src="app/services/pop-up.js"></script>
     <script src="app/services/event.js"></script>
     <script src="app/controllers/main.js"></script>
+    <script src="app/controllers/modal-alert.js"></script>
 
 
 

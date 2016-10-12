@@ -20,7 +20,7 @@ var app = angular.module('alertAsApp', [
             LOADING_CLASS: 'pace-progress' 
          })
         .constant('CONSTANTES', { 
-            VIEW_FOLDER: 'app-minify',
+            VIEW_FOLDER: 'app',
             URL_SERVIDOR: 'http://{{HOST}}/sismologic-map/app/web' 
             //URL_SERVIDOR: 'http://alertas/alert2-as/web/'  
          })

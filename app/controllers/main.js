@@ -10,23 +10,40 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         $scope.host = $location.host();
         $scope.protocol = $location.protocol();
 
-
-        angular.extend($scope, {
-            iconStyle: {
-                image: {
-                    icon: {
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        opacity: 0.90,
-                        src: 'img/marker-green.png'
-                    }
+        $scope.events = [];
+        $scope.iconYellow = {
+            "image": {
+                "icon": {
+                    "anchor": [0.5, 1],
+                    "anchorXUnits": "fraction",
+                    "anchorYUnits": "fraction",
+                    "opacity": 0.50,
+                    "src": "img/marker-yellow.png"
                 }
             }
-        });
-
-        $scope.events = [];
-
+        };
+        $scope.iconOrange = {
+            "image": {
+                "icon": {
+                    "anchor": [0.5, 1],
+                    "anchorXUnits": "fraction",
+                    "anchorYUnits": "fraction",
+                    "opacity": 0.50,
+                    "src": "img/marker-orange.png"
+                }
+            }
+        };
+        $scope.iconRed = {
+            "image": {
+                "icon": {
+                    "anchor": [0.5, 1],
+                    "anchorXUnits": "fraction",
+                    "anchorYUnits": "fraction",
+                    "opacity": 0.50,
+                    "src": "img/marker-red.png"
+                }
+            }
+        };
         // Map Config Variables 
         $scope.mapCenterConfig = {"center": {"lat": -14.9, "lon": -59.5, "zoom": 4}};
         $scope.mapCenterConfigOriginal = {};
@@ -40,6 +57,18 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
             var events = eventService.getEventList();
             $scope.events = events.earthquakes;
             $log.log($scope.events);
+        }
+        $scope.getIcon = function (magnitude) {
+            var value = parseFloat(magnitude);
+            var src = "./img/";
+            var iconColor = 'yellow';
+            if (value > 3 && value < 4) {
+                return src+"marker-orange.png";
+            }
+            if (value > 4) {
+                return src+"marker-red.png";
+            }
+            return src+"marker-yellow.png";
         }
 
         /**
@@ -66,13 +95,13 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         /**
          * Abrir Modal de Alertas
          */
-        $scope.openModalAlert = function (emergencia) {
+        $scope.openModalAlert = function (evento) {
 
             popUpService.showSingletonModal({
                 templateUrl: CONSTANTES.VIEW_FOLDER + '/views/modalAlert.html',
                 controller: "ModalAlertController",
                 inputs: {
-                    'emergencia': emergencia
+                    'evento': evento
                 }
             }, function (modal) {
                 modal.close.then(function (result) {
@@ -154,7 +183,6 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
                         'codarService': codarService,
                         'codares': $scope.codares
                     },
-
                 }
             }, function (modal) {
                 modal.close.then(function (result) {
