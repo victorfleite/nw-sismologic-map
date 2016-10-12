@@ -1,0 +1,22 @@
+{
+    "count": "390",
+    "earthquakes": [{
+            "src": "us",
+            "eqid": "2010zjb3",
+            "timedate": "2010-07-31 23:34:56",
+            "lat": "51.505",
+            "lon": "-0.09",
+            "magnitude": "4.7",
+            "depth": "208.5",
+            "region": "Ghowrayd Gharami, Afghanistan"
+        }, {
+            "src": "us",
+            "eqid": "2010zjbz",
+            "timedate": "2010-07-31 23:12:59",
+            "lat": "-15.9",
+            "lon": "-67.5",
+            "magnitude": "5.1",
+            "depth": "69.6",
+            "region": "Gasmata, Papua New Guinea"
+        }]
+}
