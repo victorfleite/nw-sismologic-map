@@ -16,8 +16,6 @@
         <link rel="stylesheet" href="css/style.css">
 
 
-        <script src="js/modernizr.custom.js"></script>
-
     </head>
     <body ng-app="alertAsApp" ng-controller="mainController" ng-class="loader" ng-init="initialize();">
 
@@ -29,10 +27,29 @@
 
     <ng-view></ng-view>
 
+    <style>
+        a.trigger.red >i {
+            background-image: url("./img/marker-red.png");
+            width: 64px;
+            height: 62px;
+        }
+        a.trigger.orange >i {
+            background-image: url("./img/marker-orange.png");
+            width: 64px;
+            height: 62px;
+        }
+        a.trigger.yellow >i {
+            background-image: url("./img/marker-yellow.png");
+            width: 64px;
+            height: 62px;
+        }
+    </style>    
     <section id="map">
         <openlayers  ol-center="mapCenterConfig.center" width="100%" height="100%">
-            <ol-marker ng-repeat="event in events" name="event.region" lat="event.lat" lon="event.lon">
-                <p ng-click="openModalAlert(event)"><img ng-src="{{getIcon(event.magnitude)}}"></p>
+            <ol-marker ng-repeat="event in events" name="event.region" lat="event.lat" lon="event.lon" ol-style="iconTransparent">
+                <a ng-click="openModalAlert(event)"  ng-class="['trigger', getIconColor(event.magnitude)]">
+                    <i></i>
+                </a>
             </ol-marker>
         </openlayers>		
     </section>

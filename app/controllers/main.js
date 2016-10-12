@@ -11,39 +11,18 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         $scope.protocol = $location.protocol();
 
         $scope.events = [];
-        $scope.iconYellow = {
+        $scope.iconTransparent = {
             "image": {
                 "icon": {
                     "anchor": [0.5, 1],
                     "anchorXUnits": "fraction",
                     "anchorYUnits": "fraction",
-                    "opacity": 0.50,
-                    "src": "img/marker-yellow.png"
-                }
-            }
-        };
-        $scope.iconOrange = {
-            "image": {
-                "icon": {
-                    "anchor": [0.5, 1],
-                    "anchorXUnits": "fraction",
-                    "anchorYUnits": "fraction",
-                    "opacity": 0.50,
-                    "src": "img/marker-orange.png"
-                }
-            }
-        };
-        $scope.iconRed = {
-            "image": {
-                "icon": {
-                    "anchor": [0.5, 1],
-                    "anchorXUnits": "fraction",
-                    "anchorYUnits": "fraction",
-                    "opacity": 0.50,
+                    "opacity": 0,
                     "src": "img/marker-red.png"
                 }
             }
         };
+       
         // Map Config Variables 
         $scope.mapCenterConfig = {"center": {"lat": -14.9, "lon": -59.5, "zoom": 4}};
         $scope.mapCenterConfigOriginal = {};
@@ -58,17 +37,16 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
             $scope.events = events.earthquakes;
             $log.log($scope.events);
         }
-        $scope.getIcon = function (magnitude) {
+        $scope.getIconColor = function (magnitude) {
             var value = parseFloat(magnitude);
-            var src = "./img/";
             var iconColor = 'yellow';
             if (value > 3 && value < 4) {
-                return src+"marker-orange.png";
+                return "orange";
             }
             if (value > 4) {
-                return src+"marker-red.png";
+                return "red";
             }
-            return src+"marker-yellow.png";
+            return "yellow";
         }
 
         /**
