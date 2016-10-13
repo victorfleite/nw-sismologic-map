@@ -1,3 +1,47 @@
+<style>
+    
+    @font-face {
+    font-family: 'Oswald';
+    src:
+        url('/fonts/alertas/fonts/Oswald-Regular.ttf') format("truetype");
+    }
+
+    @font-face {
+    font-family: 'Lato';
+    src:
+        url('/fonts/alertas/fonts/Lato-Regular.ttf') format("truetype");
+    }
+    .dialog__content{
+        font-family: "Lato", sans-serif;       
+    }
+    .headerAffected{
+         padding: 30px;
+         font-size: 30px;
+    }
+    .headerAffected .line{
+        margin-bottom: 5px;
+    }
+    .red{
+         color: red;
+    }
+    .wrapperAffected{        
+        top: 240px!important;
+    }
+    .wrapperAffected img{
+        max-width: 363px;        
+    }
+    .wrapperDetail{
+        padding: 15px;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    
+    
+</style>    
+
 <div id="alert-detail" ng-class="['dialog', 'dialog--open']">
 		
 		<div class="dialog__overlay"></div> 
@@ -10,20 +54,18 @@
 			</header>
 
 			<div class="mobileWrapperContentModal">
-				<section class="wrapperDetail"> 
-					
-				</section>
+				<section class="wrapperDetail" ng-bind-html="evento.text"></section>
 
 				<section class="headerAffected">
-					{{evento.timedate}}
-
+                                    <div class="line">DATA: <span class="red">{{evento.timedate}}</span></div>
+                                    <div class="line"> MORTOS: <span class="red">{{evento.deaths}}</span> </div>
 				</section>
 				
 				<section class="wrapperAffected">
-					
+                                    <img ng-show="evento.image" ng-src="{{getWindowsPath(evento.image)}}">
 				</section>
 			</div>
 
-			<a href="#" class="action close" ng-click="close()" data-dialog-close>u</a>
+			<a href="#" class="action close" ng-mouseover="close()" data-dialog-close>u</a>
 		</div>
 </div>

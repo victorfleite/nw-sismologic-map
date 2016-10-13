@@ -1,67 +1,34 @@
 {
     "count": "390",
     "earthquakes": [{
-            "src": "us",
-            "eqid": "2010zjb3",
-            "timedate": "2010-07-31 23:34:56",
-            "lat": 36.4828,
-            "lon": 70.3622,
-            "magnitude": "2",
-            "depth": "208.5",
-            "region": "Ghowrayd Gharami, Afghanistan"
-        }, {
-            "src": "us",
-            "eqid": "2010zjbz",
-            "timedate": "2010-07-31 23:12:59",
-            "lat": -7.0987,
-            "lon": 150.6746,
-            "magnitude": "5.1",
-            "depth": "69.6",
-            "region": "Gasmata, Papua New Guinea"
-        }, {
-            "src": "us",
-            "eqid": "2010zjbe",
-            "timedate": "2010-07-31 18:20:09",
-            "lat": 52.9777,
-            "lon": -169.8306,
-            "magnitude": "4.0",
-            "depth": "17.6",
-            "region": "Nikolski, AK, United States"
-        }, {
-            "src": "ak",
-            "eqid": "10066861",
-            "timedate": "2010-07-31 18:20:06",
-            "lat": 52.6978,
-            "lon": -169.6822,
-            "magnitude": "4.1",
-            "depth": "4.8",
-            "region": "Nikolski, AK, United States"
-        }, {
-            "src": "us",
-            "eqid": "2010zjbd",
-            "timedate": "2010-07-31 18:17:21",
-            "lat": 52.832,
-            "lon": -169.7821,
-            "magnitude": "4.1",
-            "depth": "25.7",
-            "region": "Nikolski, AK, United States"
-        }, {
-            "src": "ak",
-            "eqid": "10066858",
-            "timedate": "2010-07-31 18:17:18",
-            "lat": 52.6676,
-            "lon": -169.6415,
-            "magnitude": "4.0",
-            "depth": "4.8",
-            "region": "Nikolski, AK, United States"            
-        }, {
-            "src": "us",
-            "eqid": "2010zjay",
-            "timedate": "2010-07-31 11:36:56",
-            "lat": -0.7272,
-            "lon": -15.9773,
-            "magnitude": "5.4",
-            "depth": "10.4",
-            "region": "Ilha em algum lugar"
-        }]
+            "timedate": "15/08/1950",
+            "lat": 28.36,
+            "lon": 96.45,
+            "magnitude": "8.6",
+            "region": "Assam Tibet",
+            "deaths": "1500",
+            "image": "Topografic_map_of_Tibetan_Plateau.png",
+            "text": "Pelo menos 1.500 pessoas foram mortas em todo Tibete oriental e Assam, na Índia, quando esse tremor sacudiu a região.<br><br> Rachaduras no solo, grandes deslizamentos de terra e vulcões de areia atingiu na área.<br><br> O terremoto foi sentido nas Províncias de Sichuan e Yunnan da China, e tão distantes como Calcutá, India.<br><br>O tremor causou grandes deslizamentos de terra que bloquearam rios. <br><br>Quando os rios finalmente estouraram através das paredes dos escombros, ondas inundaram várias aldeias e mataram centenas de pessoas.<br><br>Este terremoto é comumente chamado o terremoto Assam-Tibet ou do terremoto Assam, mesmo sendo o epicentro no Tibete.<br><br> O terremoto ocorreu no cruzamento da colisão mais vigoroso das placas continentais do planeta, onde a placa continental indiana choca com a placa da Eurásia e mergulha por baixo.<br><br> O acidente em câmera lenta ajudou a criar o enorme Himalaia."
+        },
+        {
+            "timedate": "2005",
+            "lat": 3.597031,
+            "lon": 98.678513,
+            "magnitude": "8.6",
+            "region": "Northern Sumatra, Indonesia",
+            "deaths": "1000",
+            "image": "sunda-trench.jpg",
+            "text": "Mais de 1.000 pessoas foram mortas, com centenas de feridos, a maioria em Nias, no norte de Sumatra, na Indonésia.<br><br> O terremoto atingiu apenas alguns meses após um terremoto ainda maior destruiu a região.<br><br>O terremoto rompeu abaixo da superfície do Oceano Índico, onde a placa Indo-australiana está empurrando sob a placa da Eurásia na trincheira de Sunda, semelhante ao terremoto 2004"
+        },
+        {
+            "timedate": "1965",
+            "lat": 51.808319,
+            "lon": 178.299551,
+            "magnitude": "8.7",
+            "region": "Rat Islands, Alaska",
+            "deaths": "Não informado",
+            "image": "alaska-clear-sky-image-110210-02.jpg",
+            "text": "Iaska tinha sido um estado com apenas 7 anos, quando este grande terremoto desencadeou um tsunami de mais de 30 pés (10 metros).<br><br> Apesar de seu tamanho, o tremor causou poucos danos, devido à sua localização remota na ponta das Ilhas Aleutas. <br><br>O tsunami foi relatado no Havaí e se espalhou tão longe quanto o Japão. <br><br>O tremor foi o resultado do mergulho Placa do Pacífico abaixo da placa norte-americana no megathrust Alaska-Aleutian, que tem sido o local de muitos terremotos megathrust. <br><br>O tremor rachou prédios de madeira dividiu uma pista de asfalto fez fissuras na estação Loran EUA Guarda Costeira."
+        }
+    ]
 }

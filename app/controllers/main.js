@@ -24,7 +24,7 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         };
        
         // Map Config Variables 
-        $scope.mapCenterConfig = {"center": {"lat": -14.9, "lon": -59.5, "zoom": 4}};
+        $scope.mapCenterConfig = {"center": {"lat": 0, "lon": 0, "zoom": 3}};
         $scope.mapCenterConfigOriginal = {};
 
 

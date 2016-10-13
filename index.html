@@ -47,7 +47,7 @@
     <section id="map">
         <openlayers  ol-center="mapCenterConfig.center" width="100%" height="100%">
             <ol-marker ng-repeat="event in events" name="event.region" lat="event.lat" lon="event.lon" ol-style="iconTransparent">
-                <a ng-click="openModalAlert(event)"  ng-class="['trigger', getIconColor(event.magnitude)]">
+                <a ng-mouseover="openModalAlert(event)"  ng-class="['trigger', getIconColor(event.magnitude)]">
                     <i></i>
                 </a>
             </ol-marker>
