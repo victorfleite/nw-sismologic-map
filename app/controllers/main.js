@@ -17,6 +17,9 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
                 "center":
                         {"lat": 0, "lon": 0, "zoom": 3}
             },
+            view: {
+                rotation: 0
+            },
             osm: {
                     visible: true,
                     opacity: 0.6,
@@ -56,7 +59,7 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
             $rootScope.loader = LOADER.LOADED_CLASS;
             var events = eventService.getEventList();
             $scope.events = events.earthquakes;
-            $log.log($scope.events);
+            //$log.log($scope.events);
         }
         $scope.getIconColor = function (magnitude) {
             var value = parseFloat(magnitude);
@@ -73,8 +76,14 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         /**
          * Set as configurações Iniciais do mapa (centro, wms)
          */
-        $scope.resetMap = function () {
-            $scope.mapCenterConfig = $scope.mapCenterConfigOriginal;
+        $scope.initMap = function () {
+            $scope.mapCenterConfig =   {
+                "center":
+                        {"lat": 0, "lon": 0, "zoom": 3}
+            };
+            $scope.view = {
+                rotation: 0
+            };
         }
 
         /**
@@ -317,12 +326,11 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         /**
          * Listener que recebe solicitação de Controller filho (modal-alert.js) para setar somente a emergencia passada no mapa
          */
-        $rootScope.$on('setEmergenciaOnMap', function (event, args) {
-            var emergencia = args.emergencia;
+        $rootScope.$on('setEventOnMap', function (event, args) {
+            var evento = args.evento;
             // Setar centro do mapa a partir da emergencia passada
-            $scope.mapCenterConfig = emergencia.configCenterMap;
-            // Setar somente a emergencia no mapa
-            $scope.setEmergenciasSelecionadas([emergencia]);
+            $scope.mapCenterConfig.center.lat = evento.lat;
+            $scope.mapCenterConfig.center.lon = evento.lon + 65 ;
         });
 
         /**
