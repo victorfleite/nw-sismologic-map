@@ -11,20 +11,41 @@ app.controller('mainController', ['$rootScope', '$scope', '$log', '$translate', 
         $scope.protocol = $location.protocol();
 
         $scope.events = [];
-        $scope.iconTransparent = {
-            "image": {
-                "icon": {
-                    "anchor": [0.5, 1],
-                    "anchorXUnits": "fraction",
-                    "anchorYUnits": "fraction",
-                    "opacity": 0,
-                    "src": "img/marker-red.png"
+
+        angular.extend($scope, {
+            mapCenterConfig: {
+                "center":
+                        {"lat": 0, "lon": 0, "zoom": 3}
+            },
+            osm: {
+                    visible: true,
+                    opacity: 0.6,
+                    source: {
+                        type: 'OSM'
+                    }
+                },
+            mapbox: {
+                    visible: true,
+                    opacity: 0.8,
+                    source: {
+                        type: 'TileJSON',
+                        url: '/mapa/tiles.json'
+                    }
+            },    
+            iconTransparent: {
+                "image": {
+                    "icon": {
+                        "anchor": [0.5, 1],
+                        "anchorXUnits": "fraction",
+                        "anchorYUnits": "fraction",
+                        "opacity": 0,
+                        "src": "img/marker-red.png"
+                    }
                 }
             }
-        };
-       
+        });
+
         // Map Config Variables 
-        $scope.mapCenterConfig = {"center": {"lat": 0, "lon": 0, "zoom": 3}};
         $scope.mapCenterConfigOriginal = {};
 
 

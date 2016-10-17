@@ -15,7 +15,7 @@
         font-family: "Lato", sans-serif;       
     }
     .headerAffected{
-         padding: 30px;
+         padding: 10px;
          font-size: 30px;
     }
     .headerAffected .line{
@@ -25,10 +25,12 @@
          color: red;
     }
     .wrapperAffected{        
-        top: 240px!important;
+        top: 200px!important;
+        height: 760px;
     }
     .wrapperAffected img{
-        max-width: 363px;        
+        max-width: 350px;    
+        width: 350px;
     }
     .wrapperDetail{
         padding: 15px;
@@ -62,7 +64,7 @@
 				</section>
 				
 				<section class="wrapperAffected">
-                                    <img ng-show="evento.image" ng-src="{{getWindowsPath(evento.image)}}">
+                                    <div ng-show="evento.images" ng-repeat="image in evento.images"><img ng-src="{{getWindowsPath(image)}}"></div>                                    
 				</section>
 			</div>
 
